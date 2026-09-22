@@ -1,4 +1,6 @@
-# TP5 — Application React "panier d'achats"
+# react-panier-achats — Application React "panier d'achats"
+
+*(TP5 de l'UE JavaScript)*
 
 Mini boutique en ligne développée en **React** : liste de produits (peluches, figurines...) et panier d'achats, avec une chaîne de build **Webpack + Babel**.
 
