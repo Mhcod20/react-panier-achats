@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const PRODUCTION = false;
 const DIST_FOLDER = 'dist';
@@ -25,11 +25,7 @@ module.exports = {
       },
       host: 'localhost',
       port: 9000,
-      open: {
-         app: {
-            name: 'firefox'
-         }
-      }
+      open: true
    },
 
    module: {
@@ -66,6 +62,7 @@ module.exports = {
 
    plugins: [
       new webpack.ProgressPlugin(),
+      new FaviconsWebpackPlugin('src/favicon.ico'), 
       new HtmlWebpackPlugin({
          template: path.resolve(__dirname, 'src', 'index.html'),
          filename: './index.html',
@@ -107,7 +104,5 @@ module.exports = {
    externals: {
       react: 'React',
       'react-dom/client': 'ReactDOM'
-   },
-
-
+   }
 }

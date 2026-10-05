@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 
-// import ReactJs components
-import App from '../components/app.jsx';
+// import React components
+import App from '../components/app.component.jsx';
 
 /*
 * create React root element and insert it into document
